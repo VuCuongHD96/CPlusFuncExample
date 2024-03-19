@@ -18,9 +18,20 @@ void memeCopyExample() {
     printf("%s\n", str1);
 }
 
+//We are Stdio's Writers --> We @@@@@@@@@@s Writers
+// chức năng replace
+void memsetExample() {
+    char str[30] = "We are Stdio's Writers";
+    printf("%s\n", str);
+
+    memset(str + 3, '@', 10);
+    printf("%s\n", str);
+}
+
 int main(int argc, const char * argv[]) {
     
-    memeCopyExample();
+//    memeCopyExample();
+    memsetExample();
     
     return 0;
 }
