@@ -23,15 +23,36 @@ void memeCopyExample() {
 void memsetExample() {
     char str[30] = "We are Stdio's Writers";
     printf("%s\n", str);
-
+    
     memset(str + 3, '@', 10);
     printf("%s\n", str);
 }
 
+// so sánh 2 giá trị
+void memCompare() {
+    char str1[15] = "abcdef";
+    char str2[15] = "ABCDEF";
+    int result = memcmp(str1, str2, 4);
+    
+    if(result > 0)
+    {
+        printf("chuỗi str1 dài hơn chuỗi str2\n");
+    }
+    else if(result < 0)
+    {
+        printf("chuỗi str1 ngắn hơn chuỗi str2\n");
+    }
+    else
+    {
+        printf("chuỗi str1 bằng chuỗi str2\n");
+    }
+}
+
 int main(int argc, const char * argv[]) {
     
-//    memeCopyExample();
-    memsetExample();
+    //    memeCopyExample();
+    //    memsetExample();
+    memCompare();
     
     return 0;
 }
